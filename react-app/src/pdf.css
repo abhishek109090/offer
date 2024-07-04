@@ -1,0 +1,507 @@
+.App {
+    margin: 20px;
+  }
+  
+  button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  @media print {
+    .hide-for-print {
+      display: none;
+    }
+  }
+  .modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    
+  }
+  .ver{
+margin-left: 10px;
+height: 40px;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .rec{
+    width: fit-content;
+    background-color: red;
+    padding: 5px 10px;
+ border-radius: 10px;
+ color: white;
+
+  }
+
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  /* styles.css */
+.fixedcontainer {
+    position: relative; /* Ensure the element is positioned relative to its parent */
+    top: 50px;
+    margin-left: 70px;
+    width: 1000px; /* Set the width as needed */
+    height: 100vh; /* Make it full viewport height */
+    overflow-y: auto; /* Enable vertical scroll */
+    border: 1px solid #ccc; /* Optional, for visibility */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .progress-line {
+    position: absolute;
+    bottom: -1px; /* Positioned at the bottom of the .thought */
+    left: 0;
+    height: 4px;
+    background-color: rgb(70, 146, 15);
+    border-radius: 5px 5px;
+
+    width: 0; /* Start width from 0 */
+    animation: loadProgress 5s forwards; /* Takes 5 seconds to complete */
+}
+
+@keyframes loadProgress {
+    from { width: 100%; }
+    to { width: 0%; }
+}
+.loading-spinner {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-top-color: white; 
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s infinite linear;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 1200px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+      .fixedcontainer {
+        position: relative; /* Ensure the element is positioned relative to its parent */
+        top: 50px;
+        margin-left: 0px;
+        width: 350px; /* Set the width as needed */
+        height: 100vh; /* Make it full viewport height */
+        overflow-y: auto; /* Enable vertical scroll */
+        border: 1px solid #ccc; /* Optional, for visibility */
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .offer-letter{
+        width: 100%;
+        font-size: 10px;
+      }
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="number"],select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+  
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  input[type="number"]:focus {
+    border-color: #ff5100;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.642);
+  }
+  
+  button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  .annexure-title {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .very-confidential {
+    text-align: center;
+    font-size: 1.2em;
+    color: red;
+    font-weight: bold;
+  }
+  
+  .salary-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    margin-left: 60px;
+    background-color: rgba(135, 207, 235, 0.266);
+  }
+  
+  .salary-table th, .salary-table td {
+    border: 1px solid #cac2c2;
+    padding: 8px;
+    text-align: left;
+    
+  }
+  
+  .salary-table th {
+    background-color: #928c8c76;
+    font-weight: bold;
+  }
+  
+  .notes {
+    margin-top: 20px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:white;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(79, 178, 218);
+  }
+  
+  .header-left {
+    flex: 1;
+  }
+  
+  .header-right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .header-right img {
+    max-width: 200px; /* Adjust the width as needed */
+    height: auto;
+  }
+  
+  .notes h4 {
+    margin-bottom: 5px;
+  }
+  
+  .offer-letter {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 0px;
+    font-size: 15px;
+    font-family: Calibri, sans-serif;
+    position: relative;
+    background: url(
+    'https://mrvitsolutions.com/wp-content/uploads/2024/06/cropped-MRV_page-0001.jpg') no-repeat center center;
+    background-size: cover;
+    color: #000; /* Ensure the text is readable over the background */
+    background-size: 60%; /* Adjust the size of the background image */
+    background-blend-mode: lighten; /* Lighten the background image */
+    background-color: rgba(255, 255, 255, 0.752); /* Lighten the background color */
+    color: #000; /* Ensure the text is readable over the background */
+  
+  }
+  .offer-letter1 {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 0px;
+    font-size: 15px;
+    font-family: Calibri, sans-serif;
+    position: relative;
+    
+    color: #000; /* Ensure the text is readable over the background */
+    background-size: 60%; /* Adjust the size of the background image */
+    background-blend-mode: lighten; /* Lighten the background image */
+    background-color: rgba(255, 255, 255, 0.752); /* Lighten the background color */
+    color: #000; /* Ensure the text is readable over the background */
+  
+  }
+  .header {
+    text-align: right;
+  }
+  
+  .header h1 {
+    text-align: center;
+  }
+  
+  .date {
+    margin-top: -20px;
+  }
+  
+  .content {
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  .content h2 {
+    text-align: left;
+  }
+  
+  .footer {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .footer h1 {
+    font-size: 17px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    margin-top: -10px;
+  }
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+ 
+  .styled-table thead tr th {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 10px 15px;
+  }
+  
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+  }
+  
+  .styled-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  button {
+    background-color: #009879;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #007a66;
+  }
+  
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+  }
+  
+  .styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .styled-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  button {
+    background-color: #009879;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #007a66;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  .thought {
+    width: 300px;
+    height: 40px;
+    background-color:white;
+   
+    position: fixed; /* Changed to fixed for smoother animation and constant positioning */
+    top: 0; /* Start from top 0 */
+    left: 50%;
+    border-radius: 5px 5px;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+   text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    animation: slideDown 0.5s forwards; /* Animation for sliding down */
+    z-index: 2000;
+    box-shadow: 0px 0px 10px rgb(233, 116, 116); 
+
+}
+@keyframes slideDown {
+  0% { top: 0; }
+  100% { top: 20%; }
+}
+
+.progress-line {
+  position: absolute;
+  bottom: -1px; /* Positioned at the bottom of the .thought */
+  left: 0;
+  height: 4px;
+  background-color: rgb(70, 146, 15);
+  border-radius: 5px 5px;
+
+  width: 0; /* Start width from 0 */
+  animation: loadProgress 5s forwards; /* Takes 5 seconds to complete */
+}
+
+  .pagination ul li {
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #009879;
+    color: #009879;
+  }
+  
+  .pagination ul li.active {
+    background-color: #009879;
+    color: white;
+  }
+  table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: 35px;
+    
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-size: 18px;
+  }
+  
+  td {
+    font-size: 16px;
+  }
+  
+  thead th {
+    background-color: #f2f2f2;
+  }
